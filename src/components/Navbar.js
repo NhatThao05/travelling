@@ -159,9 +159,7 @@ export default function NavBar() {
           <IconButton size="large" edge="start" color="inherit" aria-label="open drawer" sx={{ mr: 2 }} >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap component="div" sx={{ display: { xs: 'none', sm: 'block' } }} >
-            PORTFOLIO
-          </Typography>
+          <Typography variant="h6" noWrap component="div" sx={{ display: { xs: 'none', sm: 'block' } }} >TRAVELING</Typography>
           <Search>
             <SearchIconWrapper>
               <SearchIcon />
