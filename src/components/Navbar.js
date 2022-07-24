@@ -15,7 +15,10 @@ import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
 import Avatar from '@mui/material/Avatar';
-
+import FeedOutlinedIcon from '@mui/icons-material/FeedOutlined';
+import PlaylistAddCheckOutlinedIcon from '@mui/icons-material/PlaylistAddCheckOutlined';
+import { List, ListItemText } from "@mui/material";
+import AttractionsOutlined from '@mui/icons-material/AttractionsOutlined';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -59,6 +62,13 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     },
   },
 }));
+
+export const MyList = styled(List)(({type}) => ({
+  display: type === 'row' ? 'flex' : 'block',
+  flexGrow: 2,
+  justifyContent: 'center',
+  alignItems: 'center',
+ }))
 
 export default function NavBar() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -125,6 +135,24 @@ export default function NavBar() {
     >
       <MenuItem>
         <IconButton size="large" aria-label="show 0 first new mails" color="inherit">
+          <PlaylistAddCheckOutlinedIcon />
+        </IconButton>
+        <p>Booking</p>
+      </MenuItem>
+      <MenuItem>
+        <IconButton size="large" aria-label="show 0 first new mails" color="inherit">
+          <AttractionsOutlined />
+        </IconButton>
+        <p>Service</p>
+      </MenuItem>
+      <MenuItem>
+        <IconButton size="large" aria-label="show 0 first new mails" color="inherit">
+          <FeedOutlinedIcon />
+        </IconButton>
+        <p>Information</p>
+      </MenuItem>
+      <MenuItem>
+        <IconButton size="large" aria-label="show 0 first new mails" color="inherit">
           <Badge badgeContent={0} color="error">
             <MailIcon />
           </Badge>
@@ -147,7 +175,7 @@ export default function NavBar() {
         <IconButton size="large" aria-label="account of current user" aria-controls="primary-search-account-menu" aria-haspopup="true" color="inherit" >
           <Avatar alt="Cartoon avatar" src="https://www.clipartmax.com/png/full/405-4050774_avatar-icon-flat-icon-shop-download-free-icons-for-avatar-icon-flat.png"/>
         </IconButton>
-        <p>Account</p>
+        <p>Supports</p>
       </MenuItem>
     </Menu>
   );
@@ -156,18 +184,23 @@ export default function NavBar() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
-          <IconButton size="large" edge="start" color="inherit" aria-label="open drawer" sx={{ mr: 2 }} >
+          <IconButton size="large" edge="start" color="inherit" aria-label="open drawer" sx={{ mr: 2 }}>
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap component="div" sx={{ display: { xs: 'none', sm: 'block' } }} >TRAVELING</Typography>
+          <Typography variant="h6" noWrap component="div" sx={{ display: { xs: 'none', sm: 'block' } }}>TRAVELING</Typography>
           <Search>
             <SearchIconWrapper>
               <SearchIcon />
             </SearchIconWrapper>
-            <StyledInputBase placeholder="Search…" inputProps={{ 'aria-label': 'search' }} />
+            <StyledInputBase placeholder="Search…" inputProps={{ 'aria-label': 'search' }}/>
           </Search>
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+            <MyList type="row">
+              <ListItemText primary="BOOKING" sx={{marginRight: 2}}/>
+              <ListItemText primary="SERVICE" sx={{marginRight: 2}}/>
+              <ListItemText primary="INFORMATTION"/>
+            </MyList>
             <IconButton size="large" aria-label="show 4 new mails" color="inherit">
               <Badge badgeContent={0} color="error">
                 <MailIcon />

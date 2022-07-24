@@ -18,9 +18,9 @@ const useStyles = makeStyles((theme) => ({
     position: "sticky",
     top: 0,
     [theme.breakpoints.up("sm")]: {
-      backgroundColor: "white",
+      backgroundColor: "#f8f9fa",
       color: "#555",
-      border: "1px solid #ece7e7",
+      borderRight: "2px solid #ece7e7",
     },
   },
   item: {
