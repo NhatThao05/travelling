@@ -3,6 +3,7 @@ import { makeStyles } from '@mui/styles';
 import NavBar from "./components/Navbar";
 import LeftBar from "./components/LeftBar";
 import Center from "./components/Center";
+import Rightbar from './components/RightBar';
 
 const useStyles = makeStyles((theme) => ({
   right: {
@@ -23,6 +24,9 @@ function App() {
         </Grid>
         <Grid item sm={7} xs={10}>
           <Center />
+        </Grid>
+        <Grid item sm={3} className={classes.right}>
+          <Rightbar />
         </Grid>
       </Grid>
     </>   
