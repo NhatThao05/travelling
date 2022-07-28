@@ -30,7 +30,6 @@ function App() {
           <Rightbar />
         </Grid>
       </Grid>
-      {/* <Chat /> */}
       <Footer />
     </>   
   );

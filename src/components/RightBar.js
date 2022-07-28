@@ -81,7 +81,6 @@ export default function Rightbar () {
      </Box>
      <Divider flexItem style={{marginBottom: 5}}/>
      <Chat />
-
    </Container>
  );
 };
