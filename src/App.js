@@ -4,6 +4,7 @@ import NavBar from "./components/Navbar";
 import LeftBar from "./components/LeftBar";
 import Center from "./components/Center";
 import Rightbar from './components/RightBar';
+import Footer from './components/Footer';
 
 const useStyles = makeStyles((theme) => ({
   right: {
@@ -29,6 +30,8 @@ function App() {
           <Rightbar />
         </Grid>
       </Grid>
+      {/* <Chat /> */}
+      <Footer />
     </>   
   );
 }

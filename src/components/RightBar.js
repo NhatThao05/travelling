@@ -1,5 +1,7 @@
 import { Avatar, Container, ImageList, ImageListItem, Typography, Divider, Link, AvatarGroup, Box} from "@mui/material"
 import { makeStyles } from '@mui/styles';
+import Chat from './Chat';
+
 
 const preventDefault = (event) => event.preventDefault();
 
@@ -78,6 +80,8 @@ export default function Rightbar () {
       </Link>
      </Box>
      <Divider flexItem style={{marginBottom: 5}}/>
+     <Chat />
+
    </Container>
  );
 };
